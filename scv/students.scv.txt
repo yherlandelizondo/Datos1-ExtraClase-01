@@ -1,0 +1,1 @@
+Carne; Nombres y apellido; Correo; Telefono; Nickname; Tipo de estudiante; Promedio(Examenes); Promedio(Quices); Promedio(Tareas); Nota Proyecto 1; Nota Proyecto 2; Nota Proyecto 3
