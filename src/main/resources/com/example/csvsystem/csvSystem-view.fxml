@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
@@ -7,18 +6,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csvsystem.controller">
    <children>
-      <Button fx:id="fileSelectionBtn" layoutX="183.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#getInfo" prefHeight="44.0" prefWidth="235.0" text="Choose a cvs file">
+      <Button fx:id="fileSelectionBtn" layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#getCsvFile" prefHeight="54.0" prefWidth="251.0" text="Elija un archivo csv">
           <font>
             <Font name="Arial Black" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="infoTable" layoutX="54.0" layoutY="94.0" prefHeight="272.0" prefWidth="494.0">
+      <TableView fx:id="infoTable" layoutX="8.0" layoutY="7.0" prefHeight="364.0" prefWidth="1151.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="studentID" prefWidth="75.0" text="Carne" />
+          <TableColumn fx:id="studentName" prefWidth="100.0" text="Nombre" />
+            <TableColumn fx:id="studentEmail" prefWidth="100.0" text="Correo" />
+            <TableColumn fx:id="studentPhone" prefWidth="100.0" text="Telefono" />
+            <TableColumn fx:id="studentNickname" prefWidth="100.0" text="Nickname" />
+            <TableColumn fx:id="studentType" prefWidth="45.0" text="Tipo" />
+            <TableColumn fx:id="avrgExamNote" prefWidth="70.0" text="Examenes" />
+            <TableColumn fx:id="avrgQuizNote" prefWidth="60.0" text="Quices" />
+            <TableColumn fx:id="avrgHomeworkNote" prefWidth="60.0" text="Tareas" />
+            <TableColumn fx:id="project1" prefWidth="70.0" text="Proyecto 1" />
+            <TableColumn fx:id="project2" prefWidth="70.0" text="Proyecto 2" />
+            <TableColumn fx:id="project3" prefWidth="75.0" text="Proyecto 3" />
+            <TableColumn fx:id="avrgProjectNote" prefWidth="75.0" text="Prom. Pryct" />
+            <TableColumn fx:id="avrgEQTNote" prefWidth="75.0" text="Prom E.Q.T" />
+            <TableColumn fx:id="finalNote" prefWidth="75.0" text="Nota final" />
         </columns>
       </TableView>
+      <Button fx:id="updateBtn" layoutX="902.0" layoutY="389.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="251.0" text="Calcular notas">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
