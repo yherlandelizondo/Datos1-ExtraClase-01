@@ -158,4 +158,7 @@ public class Student {
     public void setFinalNote(float finalNote) {
         this.finalNote = new SimpleFloatProperty(finalNote);
     }
+    public void getAllInfo(){
+        return studentID.get(), studentName.get(), studentEmail.get(), studentPhone.get(), studentNickname.get(), studentType.get(), avrgExamNote.get(), avrgQuizNote.get(), avrgHomeworkNote.get(), project1.get(), project2.get(), project3.get();
+    }
 }

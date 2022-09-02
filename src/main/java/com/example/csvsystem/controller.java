@@ -3,6 +3,7 @@ package com.example.csvsystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -13,7 +14,9 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -49,13 +52,20 @@ public class controller implements Initializable {
 
         try {
             Scanner scanner = new Scanner(scv);
+
             while(scanner.hasNextLine()) {
                 String data = scanner.nextLine();
-                String parts[] = data.split(";");
 
-                for (String part : parts) {
-                    System.out.println(part);
+                if (data.startsWith("Carne")){
+                    continue;
                 }
+                else{
+                    Array studentsInfo[];
+                    String parts[] = data.split(";");
+                    new Student(Double.parseDouble(parts[0]),parts[1],parts[2],Double.parseDouble(parts[3]),parts[4],parts[5],Float.parseFloat(parts[6]),Float.parseFloat(parts[7]),Float.parseFloat(parts[8]),Float.parseFloat(parts[9]),Float.parseFloat(parts[10]),Float.parseFloat(parts[11]),Float.parseFloat(parts[11]),Float.parseFloat(parts[11]),Float.parseFloat(parts[11]));
+
+                }
+
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
