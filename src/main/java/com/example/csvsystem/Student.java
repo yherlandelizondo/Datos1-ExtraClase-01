@@ -5,10 +5,10 @@ import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Student {
-    private SimpleDoubleProperty studentID;
+    private SimpleStringProperty studentID;
     private SimpleStringProperty studentName;
     private SimpleStringProperty studentEmail;
-    private SimpleDoubleProperty studentPhone;
+    private SimpleStringProperty studentPhone;
     private SimpleStringProperty studentNickname;
     private SimpleStringProperty studentType;
     private SimpleFloatProperty avrgExamNote;
@@ -21,30 +21,38 @@ public class Student {
     private SimpleFloatProperty avrgEQTNote;
     private SimpleFloatProperty finalNote;
 
-    public Student(double studentID, String studentName, String studentEmail, double studentPhone, String studentNickname, String studentType, float avrgExamNote, float avrgQuizNote, float avrgHomeworkNote, float project1, float project2, float project3, float avrgProjectNote, float avrgEQTNote, float finalNote) {
-        this.studentID = new SimpleDoubleProperty(studentID);
-        this.studentName = new SimpleStringProperty(studentName);
-        this.studentEmail = new SimpleStringProperty(studentEmail);
-        this.studentPhone = new SimpleDoubleProperty(studentPhone);
-        this.studentNickname = new SimpleStringProperty(studentNickname);
-        this.studentType = new SimpleStringProperty(studentType);
-        this.avrgExamNote = new SimpleFloatProperty(avrgExamNote);
-        this.avrgQuizNote = new SimpleFloatProperty(avrgQuizNote);
-        this.avrgHomeworkNote = new SimpleFloatProperty(avrgHomeworkNote);
-        this.project1 = new SimpleFloatProperty(project1);
-        this.project2 = new SimpleFloatProperty(project2);
-        this.project3 = new SimpleFloatProperty(project3);
-        this.avrgProjectNote = new SimpleFloatProperty(avrgProjectNote);
-        this.avrgEQTNote = new SimpleFloatProperty(avrgEQTNote);
-        this.finalNote = new SimpleFloatProperty(finalNote);
+    public Student(
+        String studentID, String studentName
+        , String studentEmail, String studentPhone
+        , String studentNickname, String studentType
+        , float avrgExamNote, float avrgQuizNote
+        , float avrgHomeworkNote, float project1
+        , float project2, float project3
+        , float avrgProjectNote, float avrgEQTNote, float finalNote) {
+
+            this.studentID = new SimpleStringProperty(studentID);
+            this.studentName = new SimpleStringProperty(studentName);
+            this.studentEmail = new SimpleStringProperty(studentEmail);
+            this.studentPhone = new SimpleStringProperty(studentPhone);
+            this.studentNickname = new SimpleStringProperty(studentNickname);
+            this.studentType = new SimpleStringProperty(studentType);
+            this.avrgExamNote = new SimpleFloatProperty(avrgExamNote);
+            this.avrgQuizNote = new SimpleFloatProperty(avrgQuizNote);
+            this.avrgHomeworkNote = new SimpleFloatProperty(avrgHomeworkNote);
+            this.project1 = new SimpleFloatProperty(project1);
+            this.project2 = new SimpleFloatProperty(project2);
+            this.project3 = new SimpleFloatProperty(project3);
+            this.avrgProjectNote = new SimpleFloatProperty(avrgProjectNote);
+            this.avrgEQTNote = new SimpleFloatProperty(avrgEQTNote);
+            this.finalNote = new SimpleFloatProperty(finalNote);
     }
 
-    public double getStudentID() {
+    public String getStudentID() {
         return studentID.get();
     }
 
-    public void setStudentID(double studentID) {
-        this.studentID = new SimpleDoubleProperty(studentID);
+    public void setStudentID(String studentID) {
+        this.studentID = new SimpleStringProperty(studentID);
     }
 
     public String getStudentName() {
@@ -63,12 +71,12 @@ public class Student {
         this.studentEmail = new SimpleStringProperty(studentEmail);
     }
 
-    public double getStudentPhone() {
+    public String getStudentPhone() {
         return studentPhone.get();
     }
 
-    public void setStudentPhone(double studentPhone) {
-        this.studentPhone = new SimpleDoubleProperty(studentPhone);
+    public void setStudentPhone(String studentPhone) {
+        this.studentPhone = new SimpleStringProperty(studentPhone);
     }
 
     public String getStudentNickname() {
@@ -103,7 +111,7 @@ public class Student {
         this.avrgQuizNote = new SimpleFloatProperty(quizProm);
     }
 
-    public float getAvrHomework(){
+    public float getAvrHomeWorkNote(){
         return avrgHomeworkNote.get();
     }
 
@@ -157,8 +165,5 @@ public class Student {
 
     public void setFinalNote(float finalNote) {
         this.finalNote = new SimpleFloatProperty(finalNote);
-    }
-    public void getAllInfo(){
-        return studentID.get(), studentName.get(), studentEmail.get(), studentPhone.get(), studentNickname.get(), studentType.get(), avrgExamNote.get(), avrgQuizNote.get(), avrgHomeworkNote.get(), project1.get(), project2.get(), project3.get();
     }
 }

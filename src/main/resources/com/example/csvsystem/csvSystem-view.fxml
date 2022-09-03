@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csvsystem.controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csvsystem.controller">
    <children>
-      <Button fx:id="fileSelectionBtn" layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#getCsvFile" prefHeight="54.0" prefWidth="251.0" text="Elija un archivo csv">
+      <Button fx:id="fileSelectionBtn" layoutX="458.0" layoutY="382.0" mnemonicParsing="false" onAction="#getCsvFile" prefHeight="54.0" prefWidth="251.0" text="Eligir archivo csv">
           <font>
             <Font name="Arial Black" size="16.0" />
          </font>
@@ -32,10 +32,5 @@
             <TableColumn fx:id="finalNote" prefWidth="75.0" text="Nota final" />
         </columns>
       </TableView>
-      <Button fx:id="updateBtn" layoutX="902.0" layoutY="389.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="251.0" text="Calcular notas">
-         <font>
-            <Font name="Arial Black" size="16.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
