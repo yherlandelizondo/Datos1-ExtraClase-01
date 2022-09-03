@@ -22,6 +22,11 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
+/**
+ * clase controlador, encargada de asociar las columnas de la tabla con su informacion respectiva,
+ * encargada ademas de dar inicio al elector de archivos
+ * @author Yherland Elizondo Cordero
+ */
 public class controller implements Initializable {
 
     FileChooser fileChooser = new FileChooser();
@@ -46,9 +51,16 @@ public class controller implements Initializable {
 
 
     @FXML
+    /**
+     * boton de seleccion de archivo
+     */
     private Button fileSelectionBtn;
 
-
+    /**
+     * metodo asociado al boton, encargado de abrir el cuadro de seleccion de archivo, ademas de ser el encargado de leer los
+     * datos del csv y darles formato para ser agregados al objeto.
+     * @param event evento encargado de identificar el click del mouse
+     */
     @FXML
     void getCsvFile(ActionEvent event) {
         File scv = fileChooser.showOpenDialog(new Stage());
@@ -72,7 +84,9 @@ public class controller implements Initializable {
                 }
 
                 String parts[] = data.split(";");
-
+/**
+ *
+ */
                 this.students.addStudent(
                         parts[0],
                         parts[1],
@@ -95,6 +109,11 @@ public class controller implements Initializable {
         }
     }
 
+    /**
+     * metodo constructor encargado de asociar los datos con la tabla.
+     * @param url *
+     * @param resourceBundle *
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         fileChooser.setInitialDirectory(new File(".\\scv"));
